@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <form id="register-form" class="card" novalidate>
+      <h1>Створити акаунт</h1>
+      <p class="subtitle">Навчальна форма: акаунт насправді не створюється, дані нікуди не зберігаються.</p>
+
+      <div class="field">
+        <label for="username">Ім'я користувача</label>
+        <input id="username" name="username" type="text" autocomplete="off" placeholder="Мінімум 3 символи">
+        <p class="error" id="username-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="off" placeholder="name@example.com">
+        <p class="error" id="email-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Мінімум 8 символів">
+        <p class="error" id="password-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="confirm-password">Підтвердження пароля</label>
+        <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Повторіть пароль">
+        <p class="error" id="confirm-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label class="checkbox" for="terms">
+          <input id="terms" name="terms" type="checkbox">
+          <span>Погоджуюсь з умовами</span>
+        </label>
+        <p class="error" id="terms-error" role="alert"></p>
+      </div>
+
+      <button type="submit" class="btn">Зареєструватися</button>
+
+      <p id="success-message" class="success" role="status" hidden>Реєстрація успішна!</p>
+    </form>
+
+    <a class="back-link" href="../expense_tracker/index.html">← Перейти до трекера витрат</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
